@@ -1,0 +1,67 @@
+Indicar si se produce un problema de precisión o de desbordamiento en los siguientes ejemplos indicando cuál sería el resultado final de las operaciones.
+	
+	a) int chico, chico1, chico2;
+	   chico1 = 123456789;
+	   chico2 = 123456780;
+        	   chico = chico1 * chico2;			
+
+	Se produce un problema de desbordamiento porque aunque los datos introducidos caben en un dato int, al multiplicarlos el resultado es un número que supera el rango de un int. 
+	Se obtiene un resultado erróneo: 1425960444.
+	El resultado correcto sería: 15241577639079420.
+	
+	b) long grande;	
+	   int chico1, chico2;
+	   chico1 = 123456789;
+	   chico2 = 123456780;
+	   grande = chico1 * chico2;			
+
+	Se produce otra vez un problema de desbordamiento porque aunque el tipo de dato long puede almacenar más números que int,
+el resultado sigue siendo demasiado grande para el rango de long.
+	Se obtiene el mismo resultado erróneo: 1425960444.
+	   			
+	c) double resultado, real1, real2;
+  	    real1 = 123.1;
+   	   real2 = 124.2;
+	   resultado = real1 * real2;
+	
+	Se produce un problema de precisión. 
+	Cuando queremos pocas cifras, obtenemos un resultado expresado en notación científica. Por ejemplo, si queremos 3 cifras, obtenemos 1.53e+004. 
+	Cuando queremos cifras suficientes para ver el resultado completo, por ejemplo, 5 cifras, obtenemos el resultado redondeado de acuerdo a los decimales que deberían aparecer: 15289
+	   
+
+	d) double resultado, real1, real2;
+	   real1 = 123456789.1;
+	   real2 = 123456789.2;
+	   resultado = real1 * real2;
+	
+	Se produce un problema de precisión. 
+	Si queremos pocas cifras, el resultado vendrá expresado en notación científica. Por ejemplo, si queremos 5 cifras, obtenemos 1.5242e+016. 
+	Cuando queremos cifras suficientes para ver el número completo, por ejemplo, 17 cifras, obtenemos el número redondeado de acuerdo a los decimales que deberían aparecer: 15241578787227558
+	   
+
+	e) double real, otro_real;
+	   real = 2e34;
+	   otro_real = real + 1;
+	   otro_real = otro_real - real;		
+
+	Se produce un problema de precisión. El resultado es 0 con muchas cifras decimales que son también 0. Solo una cifra entre todos esos 0 sería significativa, con lo cual el programa nos devuelve solo el entero.
+	El resultado que obtenemos es 0.
+	   
+
+	f) double real, otro_real;
+	   real = 1e+300;
+	   otro_real = 1e+200;
+	   otro_real = otro_real * real;		
+
+	Se produce un problema de desbordamiento porque el resultado es demasiado grande y está fuera de rango.
+	El programa nos devuelve el resultado inf, infinito.
+
+	g) float chico;
+	   double grande;
+	   grande = 2e+150;
+	   chico = grande;
+	
+	Al gual que en el apartado anterior, se produce un desbordamiento porque el resultado es demasiado grande y está fuera de rango.
+	El programa nos devuelve un valor "inf", infinito.
+	
+	

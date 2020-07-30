@@ -1,0 +1,31 @@
+Encuentre los errores de las siguientes funciones:
+
+1)	int ValorAbsoluto (int entero) {
+	if (entero < 0)
+	entero = -entero;
+	else
+	return entero;
+	}
+
+	El return solo se hace cuando se ejecuta el "else", es decir, si un entero es negativo, su valor se vuelve positivo pero no existe ninguna función "return"
+que le haga devolver el valor.
+
+2)	void Imprime(double valor) {
+	double valor;
+	cout << valor;
+	}
+
+	En la función no hace falta declarar ninguna variable. Si en el main ejecutamos la función, habrá que ejecutarla con un valor previamente dado. Al entrar en la función, no hay que declarar ninguna variable, pues ya hay un valor. Con lo cual con el cout << valor ya nos devolvería el valor que hemos dado.
+
+3)	void Cuadrado (int entero) {
+	return entero*entero;
+	}
+
+	En las funciones void no hay "return", la función termina cuando terminen de ejecutarse las sentencias.
+
+4)	bool EsPositivo(int valor) {
+	if (valor > 0)
+	return true;
+	}
+
+	Si el valor es positivo se devuelve el valor "true", pero si el valor es negativo, ¿qué valor devuelve? No hay ningún "return" para los valores negativos.

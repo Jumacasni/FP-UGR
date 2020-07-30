@@ -1,0 +1,21 @@
+Razonar sobre la falsedad o no de las afirmaciones:
+	
+	a) 'c' es una expresión de caracteres.
+		
+		Verdadero: 'c' es una expresión de carácter porque está entre comillas simples y nos devolvería el número 99 de acuerdo con la tabla del codigo ASCII. Es decir, nos devuelve un tipo de dato int, pero es una expresión de carácter.
+		
+	b) 4 < 3 es una expresión numérica.
+	
+		Falso: esta expresión sólo nos puede devolver dos valores, o true o false. En este caso sería false, con lo cual esta expresión es lógica.
+		
+	c) (4 + 3) < 5 es una expresión numérica.
+		
+		Falso: al igual que en el apartado b), sólo nos puede devolver el valor de true o false. También nos deolvería el valor de false, con lo cual es otra expresión lógica.
+		
+	d) cout << a; da como salida la escritura en pantalla de una a.
+	
+		Falso: esto da como salida de escritura lo que haya almacenado en la variable a. Para que en pantalla saliera una a, tendríamos que poner la a entre comillas dobles: cout << "a";
+		
+	e) ¿Qué realiza cin >> cte, siendo cte una constante entera?
+	
+		Se produce un error en compilación. Se produce por un fallo en la sintaxis del código. Da un error de sobrecarga de operadores.
